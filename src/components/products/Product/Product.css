@@ -123,3 +123,22 @@ img{
 {
   visibility: visible;
 }
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+.product-listing{
+   
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+	
+
+}
