@@ -1,3 +1,24 @@
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+  
+}
+
+
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
 .product-listing{
    
   margin: 0;
@@ -5,4 +26,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+	
+
 }

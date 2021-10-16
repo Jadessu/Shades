@@ -23,7 +23,7 @@ const products = [
 
 function Products() {
     return (
-        <main className="product-listing">
+        <main className="product-listing wrapper">
             
                 {products.map((product) => (
                     <div item key={product.id} >
