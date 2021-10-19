@@ -1,8 +1,7 @@
 import React from 'react'
-
+import CardItem from './cartItem/CardItem'
 function Cart( { cart}) {
-    const isEmpty = !cart.line_items.length
-    console.log(isEmpty)
+   
 
     const EmptyCart = () => (
         <h1>You have no items in your shopping cart</h1>
@@ -11,8 +10,7 @@ function Cart( { cart}) {
         <>
             {cart.line_items.map( (item) => (
                 <div>
-                    {/* <CartItem/> */}
-                    {item.name}
+                   <CardItem item={item}/>
                 </div>
             ))}
                 <div className="cardDetails">
@@ -29,7 +27,7 @@ function Cart( { cart}) {
     return (
         <div>
             <h1> YOUR SHOPPING CART</h1>
-            { isEmpty ? <EmptyCart/> : <FilledCart/>}
+            { !cart.line_items.length ? <EmptyCart/> : <FilledCart/>}
         </div>
     )
 }
