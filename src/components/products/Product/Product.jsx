@@ -19,20 +19,9 @@ function Product({ product, onAddToCart}) {
                 <div className="price">{product.price.formatted_with_symbol}</div>
             </div>
             <div className="actions-wrapper">
-                <button onClick={onAddToCart}>Add to Cart</button>
+                <button onClick={() => onAddToCart(product.id, 1)}>Add to Cart</button>
                 
             </div>
-
-
-
-
-
-
-
-
-
-           
-
             
         </div>
     )
