@@ -3,7 +3,7 @@ import React from 'react'
 import "./Product.css"
 
 
-function Product({ product}) {
+function Product({ product, onAddToCart}) {
 
 
     return (
@@ -19,7 +19,7 @@ function Product({ product}) {
                 <div className="price">{product.price.formatted_with_symbol}</div>
             </div>
             <div className="actions-wrapper">
-                <button>Add to Cart</button>
+                <button onClick={onAddToCart}>Add to Cart</button>
                 
             </div>
 
