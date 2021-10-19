@@ -28,53 +28,49 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          EPIC
-          <i class="fab fa-firstdraft" />
-        </Link>
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
-        </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
+      <div className="wrapper">
+        <nav className="navbar">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            MAKEITUP
+          </Link>
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
 
-          <li className="nav-item">
-            <Link to="/shop" className="nav-links" onClick={closeMobileMenu}>
-              Shop
-            </Link>
-          </li>
+            <li className="nav-item">
+              <Link to="/shop" className="nav-links" onClick={closeMobileMenu}>
+                Shop
+              </Link>
+            </li>
 
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link
-              to="/categories"
-              className="nav-links"
-              onClick={closeMobileMenu}
+            <li
+              className="nav-item"
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
             >
-              Categories <i className="fas fa-caret-down" />
-            </Link>
-            {dropdown && <Dropdown />}
-          </li>
+              <Link
+                to="/categories"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Categories <i className="fas fa-caret-down" />
+              </Link>
+              {dropdown && <Dropdown />}
+            </li>
 
-          <li className="nav-item">
-            <Link
-              to="/about"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              About
-            </Link>
-          </li>
-          
-          {/* <li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                About
+              </Link>
+            </li>
+
+            {/* <li>
             <Link
               to="/sign-up"
               className="nav-links-mobile"
@@ -83,9 +79,9 @@ function Navbar() {
               Sign Up
             </Link>
           </li> */}
-        </ul>
-       
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 }

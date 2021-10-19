@@ -1,0 +1,142 @@
+body{
+    background-color: black;
+}
+.main-wrapper {
+  width: 97%;
+  max-width: 1200px;
+  max-height: 90vh;
+  margin: 0 auto;
+  float: none;
+  color: white;
+  /* background-color: red; */
+}
+.image {
+  /* background-color: red; */
+  grid-area: image;
+ 
+  /* background-repeat: no-repeat; */
+}
+
+.container{
+    text-align: center;
+  background: #843722;
+}
+
+.image img{
+    max-width: 100%;
+}
+
+.main-text {
+  grid-area: main-text;
+  background: #c6;
+  border-bottom: 3px solid black;
+}
+.bottom-left {
+  grid-area: lefttext;
+  background-color: #AF6E51;
+}
+.bottom-right {
+  grid-area: righttext;
+  background-color: #3D0C02;
+}
+
+.footer {
+  background-color: black;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.footer .second{
+    background-color: rgb(10, 10, 10);
+}
+
+
+@media only screen and (min-width: 480px)  {
+    .wrapper{
+        /* background-color: yellow; */
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:
+      "image image image image main-text  main-text  main-text  "
+      "image image image image main-text  main-text  main-text  "
+      "image image image image   lefttext  righttext   righttext  "
+      " footer footer footer footer footer footer footer";
+      text-align: start;
+  }
+
+  .footer{
+      flex-direction: row;
+      background-color: #260701;
+      max-height: 200px;
+  }
+  .footer .second{
+      background-color: #260701;
+  }
+
+  .image{
+      border-right: 3px solid black;
+       background-image: url("./images/back3.jpg");
+       background-position: center;
+       background-repeat: no-repeat;
+  }
+
+  .image img{
+      display: none;
+  }
+
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-text-title {
+    margin-left: 6rem;
+  }
+  .main-price {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .bottom-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 3px solid black;
+  }
+  .bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 2rem; */
+  }
+  .bottom-right h4, .bottom-right p{
+      margin-left: 2rem;
+  }
+  .first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-side {
+    margin-left: 4rem;
+  }
+
+  .square {
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thumbnail-image001-2-1590675890.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*");
+    background-size: contain;
+
+    width: 150px;
+    height: 150px;
+  }
+}
