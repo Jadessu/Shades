@@ -20,8 +20,32 @@ import useStyles from "./styles";
 const steps = ["Shipping address", "Payment details"];
 
 
-function Checkout() {
+function Checkout({cart}) {
+  const [activeStep, setActiveStep] = useState(0)
+  const [checkoutToken, setCheckoutToken] = useState(null)
   const classes = useStyles()
+
+useEffect( () => {
+const generateToken = async () => {
+  try {
+    const token = await commerce.checkout.generateToken(cart.id, { type: 'cart'} )
+    console.log("this is token", token)
+    setCheckoutToken(token)
+
+  } catch(error){
+
+  }
+}
+generateToken()
+  },[cart])
+
+  
+
+  const Confirmation = () => (
+    <div>COnfirmation</div>
+  )
+
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken}/> : <PaymentForm/>
   return (
     <div>
       <div className={classes.toolbar} />
@@ -35,6 +59,7 @@ function Checkout() {
                 </Step>
             ))}
           </Stepper>
+          { activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form/>}
         </Paper>
 
       </main>

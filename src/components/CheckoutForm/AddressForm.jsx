@@ -11,26 +11,27 @@ function AddressForm({checkoutToken}) {
     const [ shippingSubdivision, setShippingSubdivision] = useState("")
     const [ shippingOptions, setShippingOptions] = useState([])
     const [ shippingOption, setShippingOption] = useState("")
+    const methods = useForm()
 
-    const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name}))
+    // const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name}))
 
     useEffect( () => {
         fetchShippingCountries(checkoutToken.id)
-    })
+    }, [])
 
      const fetchShippingCountries = async (checkoutTokenId) => {
        const { countries } =
          await commerce.services.localeListShippingCountries(checkoutTokenId);
 
        setShippingCountries(countries);
-       setShippingCountry(Object.keys(countries)[0]);
+       console.log(countries)
+    //    setShippingCountry(Object.keys(countries)[0]);
      };
 
 
-    const methods = useForm()
     return (
       <div>
-        <Typography>Shipping Address</Typography>
+        <Typography variant="h6" gutterBottom>Shipping Address</Typography>
         <FormProvider {...methods}>
           <form onSubmit="">
             <Grid container spacing={3}>
@@ -42,7 +43,7 @@ function AddressForm({checkoutToken}) {
               <FormInput required name="zIP" label="Postal Code" />
               <Grid item xs={12} sm={6}>
                 <InputLabel>Shipping Country</InputLabel>
-                <Select
+                {/* <Select
                   value={shippingCountry}
                   fullwidth
                   onChange={(event) => setShippingCountry(event.target.value)}
@@ -54,7 +55,7 @@ function AddressForm({checkoutToken}) {
                         {item.label}
                       </MenuItem>
                     ))}
-                </Select>
+                </Select> */}
               </Grid>
               {/* <Grid item xs={12} sm={6}>
                     <InputLabel>Shipping Subdivision</InputLabel>

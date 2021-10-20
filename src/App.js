@@ -48,7 +48,6 @@ const handleEmptyCart = async () => {
   setCart(response.cart);
 };
   
-  console.log(cart)
   useEffect( () => {
 fetchProducts()
 fetchCart()
