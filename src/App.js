@@ -1,6 +1,6 @@
 import './App.css';
 // import Products from './components/Products/Products';
-// import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import { Products} from "./components"
 import { commerce } from "./lib/commerce"
 import { useState, useEffect} from "react"
@@ -34,14 +34,21 @@ fetchCart()
   console.log(cart.totalItems)
   
   return (
+    <Router>
     <div className="App">
-    
         
     <Navbar totalItems={cart.total_items}/>
-      {/* <Products products={products} onAddToCart={handleAddToCart}/> */}
+    <Switch>
+      <Route exact path = "/">
+      <Products products={products} onAddToCart={handleAddToCart}/>
+      </Route>
+      <Route exact path = "/cart">
       <Cart cart={cart}/>
+      </Route>
+      </Switch>
    
     </div>
+    </Router>
   );
 }
 

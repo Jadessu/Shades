@@ -4,6 +4,7 @@ import { ShoppingCart} from "@material-ui/icons"
 import useStyles from "./styles";
 
 
+
 function Navbar({totalItems}) {
       const classes = useStyles();
 
