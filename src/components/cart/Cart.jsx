@@ -1,10 +1,15 @@
 import React from 'react'
 import CardItem from './cartItem/CardItem'
+import { Link } from "react-router-dom"
 function Cart( { cart}) {
    
 
     const EmptyCart = () => (
-        <h1>You have no items in your shopping cart</h1>
+        <div>
+
+            <h1>You have no items in your shopping cart</h1>
+            <Link to = "/"> Add Items</Link>
+        </div>
     )
     const FilledCart = () => (
         <>
