@@ -17,7 +17,7 @@ function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCar
                
             {cart.line_items.map( (item) => (
                 <div className="shopping-cart">
-                   <CardItem item={item}/>
+                   <CardItem item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
                 </div>
             ))}
                 <div className="cardDetails">
