@@ -8,8 +8,9 @@ function Cart( { cart}) {
     )
     const FilledCart = () => (
         <>
+               
             {cart.line_items.map( (item) => (
-                <div>
+                <div className="shopping-cart">
                    <CardItem item={item}/>
                 </div>
             ))}
@@ -20,16 +21,23 @@ function Cart( { cart}) {
                         <button>Checkout</button>
                     </div>
                 </div>
+               
         </>
     )
 
     if(!cart.line_items) return "...Loading"
     return (
-        <div>
-            <h1> YOUR SHOPPING CART</h1>
-            { !cart.line_items.length ? <EmptyCart/> : <FilledCart/>}
+      <div className="cart-wrapper">
+        <div class="heading ">
+          <h1>My Cart</h1>
+          <a href="#" class="continue">
+            Continue Shopping
+          </a>
         </div>
-    )
+        {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
+        
+      </div>
+    );
 }
 
 export default Cart
