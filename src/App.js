@@ -60,7 +60,7 @@ fetchCart()
       <div className="App">
         {/* <Navbar totalItems={cart.total_items} /> */}
         <Navbar2 totalItems={cart.total_items}/>
-        <Landing/>
+        {/* <Landing/> */}
         <Switch>
           <Route exact path="/">
             <Products products={products} onAddToCart={handleAddToCart} />
@@ -72,6 +72,10 @@ fetchCart()
               handleRemoveFromCart={handleRemoveFromCart}
               handleEmptyCart={handleEmptyCart}
             />
+          </Route>
+          
+          <Route exact path = "/checkout">
+      <Checkout/>
           </Route>
         </Switch>
       </div>

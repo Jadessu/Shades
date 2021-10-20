@@ -24,7 +24,7 @@ function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCar
                     Subtotal: {cart.subtotal.formatted_with_symbol}
                     <div>
                         <button onClick={handleEmptyCart}>Empty Cart</button>
-                        <button>Checkout</button>
+                        <button component={Link} to="/checkout">Checkout</button>
                     </div>
                 </div>
                
