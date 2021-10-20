@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CardItem.css"
 
-function CardItem({ item}) {
+function CardItem({ item, onUpdateCartQty, onRemoveFromCart}) {
   console.log(item)
     return (
       <div>
@@ -21,14 +21,24 @@ function CardItem({ item}) {
           </div>
 
           <div className="cart-quantity">
-            <button className="plus-btn" type="button" name="button">
+            <button
+              className="plus-btn"
+              type="button"
+              name="button"
+              onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}
+            >
               <img
                 src="https://designmodo.com/demo/shopping-cart/plus.svg"
                 alt=""
               />
             </button>
             <input type="text" name="name" value={item.quantity} />
-            <button className="minus-btn" type="button" name="button">
+            <button
+              className="minus-btn"
+              type="button"
+              name="button"
+              onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}
+            >
               <img
                 src="https://designmodo.com/demo/shopping-cart/minus.svg"
                 alt=""
