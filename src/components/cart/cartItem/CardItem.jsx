@@ -7,7 +7,7 @@ function CardItem({ item, onUpdateCartQty, onRemoveFromCart}) {
       <div>
         <div className="cart-item">
           <div className="cart-buttons">
-            <span className="delete-btn"></span>
+            <span className="delete-btn" onClick={ () => onRemoveFromCart(item.id)}></span>
           </div>
 
           <div className="cart-image">
