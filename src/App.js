@@ -29,6 +29,12 @@ function App() {
     const response = await commerce.cart.update(productId, { quantity})
     setCart(response.cart)
   }
+
+  const handleRemoveFromCart = async (productId) => {
+     const response = await commerce.cart.remove(productId)
+     setCart(response.cart)
+
+  }
   
   console.log(cart)
   useEffect( () => {
