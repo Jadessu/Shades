@@ -13,7 +13,7 @@ function AddressForm({checkoutToken}) {
     const [ shippingOption, setShippingOption] = useState("")
     const methods = useForm()
 
-    // const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name}))
+    const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name}))
 
     useEffect( () => {
         fetchShippingCountries(checkoutToken.id)
@@ -25,7 +25,7 @@ function AddressForm({checkoutToken}) {
 
        setShippingCountries(countries);
        console.log(countries)
-    //    setShippingCountry(Object.keys(countries)[0]);
+       setShippingCountry(Object.keys(countries)[0]);
      };
 
 
@@ -43,7 +43,7 @@ function AddressForm({checkoutToken}) {
               <FormInput required name="zIP" label="Postal Code" />
               <Grid item xs={12} sm={6}>
                 <InputLabel>Shipping Country</InputLabel>
-                {/* <Select
+                 <Select
                   value={shippingCountry}
                   fullwidth
                   onChange={(event) => setShippingCountry(event.target.value)}
@@ -55,7 +55,7 @@ function AddressForm({checkoutToken}) {
                         {item.label}
                       </MenuItem>
                     ))}
-                </Select> */}
+                </Select> 
               </Grid>
               {/* <Grid item xs={12} sm={6}>
                     <InputLabel>Shipping Subdivision</InputLabel>
