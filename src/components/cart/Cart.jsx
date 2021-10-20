@@ -1,7 +1,8 @@
 import React from 'react'
 import CardItem from './cartItem/CardItem'
 import { Link } from "react-router-dom"
-function Cart( { cart}) {
+
+function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}) {
    
 
     const EmptyCart = () => (
@@ -22,7 +23,7 @@ function Cart( { cart}) {
                 <div className="cardDetails">
                     Subtotal: {cart.subtotal.formatted_with_symbol}
                     <div>
-                        <button>Empty Cart</button>
+                        <button onClick={handleEmptyCart}>Empty Cart</button>
                         <button>Checkout</button>
                     </div>
                 </div>
