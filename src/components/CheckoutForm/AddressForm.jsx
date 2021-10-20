@@ -13,8 +13,7 @@ function AddressForm({checkoutToken}) {
     const [ shippingOption, setShippingOption] = useState("")
     const methods = useForm()
 
-    const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name}))
-    const subdivisions = Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name}))
+  
 
     useEffect( () => {
         fetchShippingCountries(checkoutToken.id)
@@ -24,6 +23,16 @@ function AddressForm({checkoutToken}) {
     useEffect( () => {
        if(shippingCountry) fetchSubDivisions(shippingCountry)
     }, [shippingCountry])
+
+      useEffect(() => {
+        if (shippingSubdivision)
+          fetchShippingOptions(
+            checkoutToken.id,
+            shippingCountry,
+            shippingSubdivision
+          );
+      }, [shippingSubdivision]);
+
 
 
 
