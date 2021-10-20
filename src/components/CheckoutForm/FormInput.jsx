@@ -2,7 +2,7 @@ import React from 'react'
 import { TextField, Grid} from "@material-ui/core"
 import { useFormContext, Controller} from "react-hook-form"
 
-function CustomTextField() {
+function FormInput({ name, label, required}) {
     const { control } = useFormContext()
     return (
         <div>
@@ -10,6 +10,10 @@ function CustomTextField() {
                 <Controller
                 as={TextField}
                 control={control}
+                fullWidth
+                name={name}
+                label={label}
+                required={required}
                  />
             </Grid>
             
@@ -17,4 +21,4 @@ function CustomTextField() {
     )
 }
 
-export default CustomTextField
+export default FormInput
