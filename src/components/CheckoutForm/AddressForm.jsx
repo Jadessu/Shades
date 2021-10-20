@@ -8,6 +8,8 @@ function AddressForm() {
     const [ shippingCountry, setShippingCountry] = useState("")
     const [ shippingSubdivisions, setShippingSubdivisions] = useState([])
     const [ shippingSubdivision, setShippingSubdivision] = useState("")
+    const [ shippingOptions, setShippingOptions] = useState([])
+    const [ shippingOption, setShippingOption] = useState("")
 
     const methods = useForm()
     return (
