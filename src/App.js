@@ -8,6 +8,7 @@ import Navbar from './components/realNavbar/Navbar';
 import Cart from './components/cart/Cart';
 import Navbar2 from './components/navbar/Navbar';
 import Landing from './components/pages/home/components/Landing';
+import Checkout from './components/CheckoutForm/Checkout/Checkout';
 
 function App() {
   const [products, setProducts] = useState([])
@@ -75,7 +76,7 @@ fetchCart()
           </Route>
           
           <Route exact path = "/checkout">
-      <Checkout/>
+      <Checkout cart={cart}/>
           </Route>
         </Switch>
       </div>

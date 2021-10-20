@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import "./Slider.css"
+// import "./Slider.css"
 import mainVideo from "../images/mainVideo.mp4"
 
 // const Container = styled.div`

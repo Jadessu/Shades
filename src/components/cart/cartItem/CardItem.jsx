@@ -7,11 +7,20 @@ function CardItem({ item, onUpdateCartQty, onRemoveFromCart}) {
       <div>
         <div className="cart-item">
           <div className="cart-buttons">
-            <span className="delete-btn" onClick={ () => onRemoveFromCart(item.id)}></span>
+            <span
+              className="delete-btn"
+              onClick={() => onRemoveFromCart(item.id)}
+            ></span>
           </div>
 
-          <div className="cart-image">
-            <img src={item.image.url} alt={item.name} />
+          <div className="cart-image-container">
+            <img
+              className="cart-item-image"
+              src={item.image.url}
+              alt={item.name}
+              width="60px"
+            />
+          
           </div>
 
           <div className="cart-description">

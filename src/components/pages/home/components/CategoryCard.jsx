@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { mobile } from "../../../../responsive";
-const Container = styled.div`
+const CategoryContainer = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
 `;
 
-const Image = styled.img`
+const CategoryImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   ${mobile({ height: "20vh" })}
 `;
 
-const Info = styled.div`
+const CategoryInfo = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -26,12 +26,12 @@ const Info = styled.div`
   justify-content: center;
 `;
 
-const Title = styled.h1`
+const CategoryTitle = styled.h1`
   color: white;
   margin-bottom: 20px;
 `;
 
-const Button = styled.button`
+const CategoryButton = styled.button`
   border: none;
   padding: 10px;
   background-color: white;
@@ -42,13 +42,13 @@ const Button = styled.button`
 
 const CategoryCard = ({ item }) => {
   return (
-    <Container>
-      <Image src={item.img} />
-      <Info>
-        <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
-      </Info>
-    </Container>
+    <CategoryContainer>
+      <CategoryImage src={item.img} />
+      <CategoryInfo>
+        <CategoryTitle>{item.title}</CategoryTitle>
+        <CategoryButton>SHOP NOW</CategoryButton>
+      </CategoryInfo>
+    </CategoryContainer>
   );
 };
 
