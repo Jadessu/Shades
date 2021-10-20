@@ -6,7 +6,7 @@ import "./Products.css"
 function Products({ products, onAddToCart}) {
     return (
         <main className="product-listing wrapper">
-            <div className = "row">
+            <div className = "product-row">
                 {products.map((product) => (
                     <div item key={product.id} className="col-1" >
                        

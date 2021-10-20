@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-div img {
+.image-wrapper img {
 	width: 100%;
 	max-width: 225px; 
   max-height: 166px;
