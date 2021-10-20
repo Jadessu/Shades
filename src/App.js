@@ -24,6 +24,11 @@ function App() {
     const item = await commerce.cart.add(productId, quantity)
     setCart(item.cart)
   }
+
+  const handleUpdateCardQty = async (productId, quantity) => {
+    const response = await commerce.cart.update(productId, { quantity})
+    setCart(response.cart)
+  }
   
   console.log(cart)
   useEffect( () => {
