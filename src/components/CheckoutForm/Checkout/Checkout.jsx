@@ -20,7 +20,7 @@ import useStyles from "./styles";
 const steps = ["Shipping address", "Payment details"];
 
 
-function Checkout({cart}) {
+function Checkout({cart, order, onCaptureCheckout, error}) {
   const [activeStep, setActiveStep] = useState(0)
   const [checkoutToken, setCheckoutToken] = useState(null)
   const [shippingData, setShippingData] = useState({})
@@ -52,7 +52,7 @@ nextStep()
     <div>COnfirmation</div>
   )
 
-  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep}/>
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep} onCaptureCheckout={onCaptureCheckout}/>
   return (
     <div>
       <div className={classes.toolbar} />
