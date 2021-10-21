@@ -52,7 +52,7 @@ nextStep()
     <div>COnfirmation</div>
   )
 
-  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep} onCaptureCheckout={onCaptureCheckout}/>
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} nextStep={nextStep}backStep={backStep} onCaptureCheckout={onCaptureCheckout}/>
   return (
     <div>
       <div className={classes.toolbar} />
