@@ -9,6 +9,7 @@ import Cart from './components/cart/Cart';
 import Navbar2 from './components/navbar/Navbar';
 import Landing from './components/pages/home/components/Landing';
 import Checkout from './components/CheckoutForm/Checkout/Checkout';
+// import { FairSkin, name} from "./requests"
 
 function App() {
   const [products, setProducts] = useState([])
@@ -19,6 +20,8 @@ function App() {
     setProducts(data)
   }
 
+ 
+    
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()
     setCart(cart)
@@ -51,6 +54,7 @@ const handleEmptyCart = async () => {
   useEffect( () => {
 fetchProducts()
 fetchCart()
+
   }, [])
 
   console.log(cart.totalItems)

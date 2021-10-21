@@ -72,8 +72,8 @@ function AddressForm({checkoutToken, next}) {
         <Typography variant="h6" gutterBottom>
           Shipping Address
         </Typography>
-        <FormProvider {...methods.handleSubmit((data) => next({...data, shippingCountry, shippingSubdivision, shippingOption}))}>
-          <form onSubmit={methods.handleSubmit()}>
+        <FormProvider {...methods}>
+          <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivision, shippingOption}))}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
                 <FormInput required name="firstName" label="First Name" />

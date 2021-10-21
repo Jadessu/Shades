@@ -30,7 +30,6 @@ useEffect( () => {
 const generateToken = async () => {
   try {
     const token = await commerce.checkout.generateToken(cart.id, { type: 'cart'} )
-    console.log("this is token", token)
     setCheckoutToken(token)
 
   } catch(error){
@@ -53,7 +52,7 @@ nextStep()
     <div>COnfirmation</div>
   )
 
-  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm/>
+  const Form = () => activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep}/>
   return (
     <div>
       <div className={classes.toolbar} />
