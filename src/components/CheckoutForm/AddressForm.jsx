@@ -3,8 +3,9 @@ import { InputLabel, Select, MenuItem, Button, Grid, Typography} from "@material
 import { useForm, FormProvider} from "react-hook-form"
 import FormInput from './FormInput'
 import { commerce } from "../../lib/commerce"
+import { Link} from "react-router-dom"
 
-function AddressForm({checkoutToken}) {
+function AddressForm({checkoutToken, next}) {
     const [ shippingCountries, setShippingCountries] = useState([])
     const [ shippingCountry, setShippingCountry] = useState("")
     const [ shippingSubdivisions, setShippingSubdivisions] = useState([])
@@ -71,15 +72,28 @@ function AddressForm({checkoutToken}) {
         <Typography variant="h6" gutterBottom>
           Shipping Address
         </Typography>
-        <FormProvider {...methods}>
-          <form onSubmit="">
+        <FormProvider {...methods.handleSubmit((data) => next({...data, shippingCountry, shippingSubdivision, shippingOption}))}>
+          <form onSubmit={methods.handleSubmit()}>
             <Grid container spacing={3}>
-              <FormInput required name="firstName" label="First Name" />
-              <FormInput required name="lastName" label="Last Name" />
-              <FormInput required name="address1" label="Address" />
-              <FormInput required name="email" label="Email" />
-              <FormInput required name="city" label="City" />
-              <FormInput required name="zIP" label="Postal Code" />
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="firstName" label="First Name" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="lastName" label="Last Name" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="address1" label="Address" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="email" label="Email" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="city" label="City" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormInput required name="zip" label="Postal Code" />
+              </Grid>
+
               <Grid item xs={12} sm={6}>
                 <InputLabel>Shipping Country</InputLabel>
                 <Select
@@ -101,7 +115,9 @@ function AddressForm({checkoutToken}) {
                 <Select
                   value={shippingSubdivision}
                   fullwidth
-                  onChange={(event) => setShippingSubdivision(event.target.value)}
+                  onChange={(event) =>
+                    setShippingSubdivision(event.target.value)
+                  }
                 >
                   {Object.entries(shippingSubdivisions)
                     .map(([code, name]) => ({ id: code, label: name }))
@@ -112,14 +128,35 @@ function AddressForm({checkoutToken}) {
                     ))}
                 </Select>
               </Grid>
-              {/* <Grid item xs={12} sm={6}>
-                    <InputLabel>Shipping Options</InputLabel>
-                    <Select value={} fullwidth onChange ={}>
-                        <MenuItem key={} value={}> Select Me </MenuItem>
-
-                        </Select>
-                </Grid>  */}
+              <Grid item xs={12} sm={12}>
+                <InputLabel>Shipping Options</InputLabel>
+                <Select
+                  value={shippingOption}
+                  fullWidth
+                  onChange={(e) => setShippingOption(e.target.value)}
+                >
+                  {shippingOptions
+                    .map((sO) => ({
+                      id: sO.id,
+                      label: `${sO.description} - (${sO.price.formatted_with_symbol})`,
+                    }))
+                    .map((item) => (
+                      <MenuItem key={item.id} value={item.id}>
+                        {item.label}
+                      </MenuItem>
+                    ))}
+                </Select>
+              </Grid>
             </Grid>
+            <br />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Button component={Link} variant="outlined" to="/cart">
+                Back to Cart
+              </Button>
+              <Button type="submit" variant="contained" color="primary">
+                Next
+              </Button>
+            </div>
           </form>
         </FormProvider>
       </div>
