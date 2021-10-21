@@ -14,6 +14,8 @@ import Checkout from './components/CheckoutForm/Checkout/Checkout';
 function App() {
   const [products, setProducts] = useState([])
   const [ cart, setCart] = useState({})
+  const [order, setOrder] = useState({})
+  const [ errorMessage, setErrorMessage] = useState("")
 
   const fetchProducts = async ()=> {
     const {data} = await commerce.products.list()
@@ -49,6 +51,25 @@ const handleEmptyCart = async () => {
   const response = await commerce.cart.empty();
 
   setCart(response.cart);
+};
+
+const refreshCart = async () => {
+  const newCart = await commerce.cart.refresh()
+  setCart(newCart)
+}
+const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+  try {
+    const incomingOrder = await commerce.checkout.capture(
+      checkoutTokenId,
+      newOrder
+    );
+
+    setOrder(incomingOrder);
+
+    refreshCart();
+  } catch (error) {
+    setErrorMessage(error.data.error.message);
+  }
 };
   
   useEffect( () => {
