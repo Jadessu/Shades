@@ -76,7 +76,6 @@ function App() {
     }
   };
 
-  const title = "junior adessu"
 
   console.log("this is order", order);
   useEffect(() => {
@@ -112,7 +111,7 @@ function App() {
           </Route>
           
           <Route exact path="/fairskin">
-          <FetchFairSkin/>
+          <FetchFairSkin onAddToCart={addItemToCart}/>
           </Route>
           <Route exact path="/mediumskin">
           <FetchMediumSkin/>
