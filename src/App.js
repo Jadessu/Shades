@@ -10,9 +10,9 @@ import Navbar2 from "./components/navbar/Navbar";
 import Landing from "./components/pages/home/components/Landing";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import {
-  fetchFairSkin,
-  fetchMediumSkin,
-  fetchDarkSkin,
+  FetchFairSkin,
+  FetchMediumSkin,
+  FetchDarkSkin,
 } from "./components/pages/categories/Category";
 // import { FairSkin, name} from "./requests"
 
@@ -76,6 +76,8 @@ function App() {
     }
   };
 
+  const title = "junior adessu"
+
   console.log("this is order", order);
   useEffect(() => {
     fetchProducts();
@@ -108,9 +110,16 @@ function App() {
               error={errorMessage}
             />
           </Route>
-          <Route path="/fairskin" exact component={withRouter(fetchFairSkin)}  />
-          <Route path="/mediumskin" exact component={fetchMediumSkin} />
-          <Route path="/darkskin" exact component={fetchDarkSkin} />
+          
+          <Route exact path="/fairskin">
+          <FetchFairSkin/>
+          </Route>
+          <Route exact path="/mediumskin">
+          <FetchMediumSkin/>
+          </Route>
+          <Route exact path="/darkskin">
+          <FetchDarkSkin/>
+          </Route>
        </Switch>
       </div>
     </Router>

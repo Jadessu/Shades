@@ -3,7 +3,7 @@ import CategoryFetch from "../../../CategoryFetch"
 import { FairSkin, MediumSkin, DarkSkin} from "../../../requests"
 import "./Trial.css"
 
-export const fetchFairSkin = () => {
+export const FetchFairSkin = ({onAddToCart, title}) => {
     return (
       <div>
         <div className="category-banner banner1">
@@ -16,11 +16,11 @@ export const fetchFairSkin = () => {
               <div className="palette fair-palette-4"></div>
           </div>
         </div>
-        <CategoryFetch fetchUrl={FairSkin} />
+        <CategoryFetch fetchUrl={FairSkin} onAddToCart={onAddToCart}/>
       </div>
     );
 }
-export const fetchMediumSkin = () => {
+export const FetchMediumSkin = () => {
     return (
       <div>
         <div className="category-banner banner2">
@@ -37,7 +37,7 @@ export const fetchMediumSkin = () => {
       </div>
     );
 }
-export const fetchDarkSkin = () => {
+export const FetchDarkSkin = () => {
     return (
       <div>
         <div className="category-banner banner3">
