@@ -20,7 +20,7 @@ export const FetchFairSkin = ({onAddToCart, title}) => {
       </div>
     );
 }
-export const FetchMediumSkin = () => {
+export const FetchMediumSkin = ({onAddToCart}) => {
     return (
       <div>
         <div className="category-banner banner2">
@@ -37,7 +37,7 @@ export const FetchMediumSkin = () => {
       </div>
     );
 }
-export const FetchDarkSkin = () => {
+export const FetchDarkSkin = ({onAddToCart}) => {
     return (
       <div>
         <div className="category-banner banner3">

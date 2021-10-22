@@ -89,7 +89,7 @@ function App() {
         <Navbar2 totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
-         <Landing />
+            <Landing />
             <Products products={products} onAddToCart={addItemToCart} />
           </Route>
           <Route exact path="/cart">
@@ -109,17 +109,17 @@ function App() {
               error={errorMessage}
             />
           </Route>
-          
+
           <Route exact path="/fairskin">
-          <FetchFairSkin onAddToCart={addItemToCart}/>
+            <FetchFairSkin onAddToCart={addItemToCart} />
           </Route>
           <Route exact path="/mediumskin">
-          <FetchMediumSkin/>
+            <FetchMediumSkin onAddToCart={addItemToCart} />
           </Route>
           <Route exact path="/darkskin">
-          <FetchDarkSkin/>
+            <FetchDarkSkin onAddToCart={addItemToCart} />
           </Route>
-       </Switch>
+        </Switch>
       </div>
     </Router>
   );
