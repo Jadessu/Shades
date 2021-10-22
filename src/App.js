@@ -90,7 +90,7 @@ function App() {
         <Navbar2 totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
-            <Landing />
+            <Landing onAddToCart={addItemToCart}/>
             <Products products={products} onAddToCart={addItemToCart} />
           </Route>
           <Route exact path="/cart">

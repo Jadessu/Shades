@@ -3,12 +3,12 @@ import Slider from './Slider'
 import Categories from './Categories'
 import PopularFetch from './PopularFetch'
 
-function Landing() {
+function Landing({onAddToCart}) {
     return (
         <div>
             <Slider/>
             <Categories/>
-            <PopularFetch />
+            <PopularFetch onAddToCart={onAddToCart}/>
             
         </div>
     )

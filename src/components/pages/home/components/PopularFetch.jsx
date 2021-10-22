@@ -19,6 +19,9 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
       fetchProducts();
     }, []);
 
+     function truncate(str, n) {
+       return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+     }
 
   return (
     <div>
@@ -28,16 +31,24 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
           {popularProducts.map((product) => (
             <div className="popular-shop-card">
               <div className="popular-title">{product.name}</div>
-              <div className="popular-desc">Men's training shoe</div>
-              <div className="popular-image">
-                
-                  <img src={product.image.url} alt={product.name}  />
+              <div className="popular-desc">
                
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: truncate(product.description, 25),
+                  }}
+                />
+              </div>
+              <div className="popular-image">
+                <img src={product.image.url} alt={product.name} />
               </div>
 
               <div className="popular-cta">
                 <div className="popular-price">$130</div>
-                <button className="popular-btn">
+                <button
+                  className="popular-btn"
+                  onClick={() => onAddToCart(product.id, 1)}
+                >
                   Add to cart
                 </button>
               </div>
