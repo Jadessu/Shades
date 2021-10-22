@@ -22,6 +22,7 @@ function App() {
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
+
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
