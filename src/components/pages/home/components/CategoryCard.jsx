@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../../../../responsive";
+import { Link } from "react-router-dom";
 const CategoryContainer = styled.div`
   flex: 1;
   margin: 3px;
@@ -46,7 +47,9 @@ const CategoryCard = ({ item }) => {
       <CategoryImage src={item.img} />
       <CategoryInfo>
         <CategoryTitle>{item.title}</CategoryTitle>
-        <CategoryButton>SHOP NOW</CategoryButton>
+        <CategoryButton >
+          <Link  to={item.path}>SHOP NOW</Link>
+          </CategoryButton>
       </CategoryInfo>
     </CategoryContainer>
   );

@@ -15,8 +15,9 @@ function FormInput({ name, label, required}) {
               <TextField
                 fullWidth
                 label={label}
-                reqyired={required}
+                required
                 error={isError}
+                defaultValue=""
               />
             )}
             // as={TextField}
