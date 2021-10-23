@@ -92,7 +92,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Landing onAddToCart={addItemToCart}/>
-            <Products products={products} onAddToCart={addItemToCart} />
+            {/* <Products products={products} onAddToCart={addItemToCart} /> */}
           </Route>
           <Route exact path="/cart">
             <Cart

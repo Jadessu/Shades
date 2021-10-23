@@ -1,0 +1,53 @@
+.footer-container{
+    background: black;
+    color: white;
+}
+.footer-container p, .footer-container h3{
+    margin: 1rem
+}
+.footer-left-container{
+    background: rgb(8, 8, 8);
+}
+
+@media only screen and (min-width: 768px) {
+	.footer-container{
+        display: flex;
+       
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem
+      
+       
+	
+
+}
+.footer-left-container, .footer-right-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+.footer-left, .footer-right{
+    justify-content: space-between;
+    text-align: start;
+}
+.footer-left-2{
+    justify-content: flex-end;
+   
+}
+
+
+.latest-news{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left-3{
+    margin-left: 4rem;
+    margin-bottom: 6rem;
+    align-items:flex-start
+    
+}
+}
