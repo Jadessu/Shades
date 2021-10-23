@@ -26,11 +26,12 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
   return (
     <div>
       <main className="popular-product-listing wrapper">
+        <h2>BEST SELLERS</h2>
         <div className="popular-product-row">
           {/* <h1>I am popular fetch</h1> */}
           {popularProducts.map((product) => (
             <div className="popular-shop-card">
-              <div className="popular-title">{product.name}</div>
+              <div className="popular-title"><h3>{product.name}</h3></div>
               <div className="popular-desc">
                
                 <p

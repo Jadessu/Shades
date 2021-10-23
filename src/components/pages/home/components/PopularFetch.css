@@ -32,9 +32,9 @@
       width: 100%;
 }
   .popular-title {
-    font-weight: 900;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 30px;
+    /* font-size: 30px; */
     color: #23211f;
     margin-bottom: 5px;
   }
