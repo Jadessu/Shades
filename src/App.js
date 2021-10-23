@@ -9,6 +9,7 @@ import Cart from "./components/cart/Cart";
 import Navbar2 from "./components/navbar/Navbar";
 import Landing from "./components/pages/home/components/Landing";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
+import Footer from "./components/pages/home/components/Footer";
 import {
   FetchFairSkin,
   FetchMediumSkin,
@@ -121,6 +122,7 @@ function App() {
             <FetchDarkSkin onAddToCart={addItemToCart} />
           </Route>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );
