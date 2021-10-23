@@ -10,6 +10,10 @@ import {
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
+import makiage from "./images/makiage.jpg"
+import fenty from "./images/fenty.jpg"
+import monika from "./images/monika.jpg"
+import farmasi from "./images/farmasi-vfx-pro.jpg"
 
 import "./Navbar.css"
 function Navbar2({totalItems}) {
@@ -20,7 +24,7 @@ function Navbar2({totalItems}) {
             <div className="row v-center">
               <div className="header-item item-left">
                 <div className="logo">
-                  <a href="#">SHADES</a>
+                  <Link to="/"> SHADES </Link>
                 </div>
               </div>
               <div className="header-item item-center">
@@ -35,8 +39,7 @@ function Navbar2({totalItems}) {
                   </div>
                   <ul className="menu-main">
                     <li>
-                        <Link to="/"> Home </Link>
-                     
+                      <Link to="/"> Home </Link>
                     </li>
                     <li className="menu-item-has-children">
                       <a href="#">
@@ -45,26 +48,26 @@ function Navbar2({totalItems}) {
                       <div className="sub-menu mega-menu mega-menu-column-4">
                         <div className="list-item text-center">
                           <a href="#">
-                            <img src="img/p1.jpg" alt="new Product" />
-                            <h4 className="title">Product 1</h4>
+                            <img src={makiage} alt="new Product" />
+                            <h4 className="title">II Makiage WULT</h4>
                           </a>
                         </div>
                         <div className="list-item text-center">
                           <a href="#">
-                            <img src="img/p2.jpg" alt="new Product" />
-                            <h4 className="title">Product 2</h4>
+                            <img src={monika} alt="new Product" />
+                            <h4 className="title">Monika Blunder</h4>
                           </a>
                         </div>
                         <div className="list-item text-center">
                           <a href="#">
-                            <img src="img/p3.jpg" alt="new Product" />
-                            <h4 className="title">Product 3</h4>
+                            <img src={fenty} alt="new Product" />
+                            <h4 className="title">Fenty Beauty Pro</h4>
                           </a>
                         </div>
                         <div className="list-item text-center">
                           <a href="#">
-                            <img src="img/p4.jpg" alt="new Product" />
-                            <h4 className="title">Product 4</h4>
+                            <img src={farmasi} alt="new Product" />
+                            <h4 className="title">Farmasi VFX PRO</h4>
                           </a>
                         </div>
                       </div>
@@ -137,7 +140,6 @@ function Navbar2({totalItems}) {
                   </Badge>
                 </IconButton>
 
-             
                 <div className="mobile-menu-trigger">
                   <span></span>
                 </div>

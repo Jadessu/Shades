@@ -31,7 +31,9 @@ function Footer() {
           <div className="footer-right">
             <div className="latest-news">
               <p>LATEST NEWS</p>
-              <span>Arrow</span>
+              <span>
+                <i class="fas fa-long-arrow-alt-right"></i>
+              </span>
             </div>
             <h3>OUR NEW MAKEUP COLLECTION</h3>
             <p>

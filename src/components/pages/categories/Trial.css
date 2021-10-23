@@ -20,12 +20,21 @@
 }
 .banner1{
 background: url("./images//light.jpg");
+background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .banner2{
-    background: url("./images//medium.jpg")
+    background: url("./images//medium.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .banner3{
-    background: url(./images/dark.jpg);
+    background: url("./images/dark2.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .category-banner p{
     margin: 2rem

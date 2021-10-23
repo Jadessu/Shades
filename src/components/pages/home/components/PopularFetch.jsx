@@ -31,9 +31,10 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
           {/* <h1>I am popular fetch</h1> */}
           {popularProducts.map((product) => (
             <div className="popular-shop-card">
-              <div className="popular-title"><h3>{product.name}</h3></div>
+              <div className="popular-title">
+                <h3>{product.name}</h3>
+              </div>
               <div className="popular-desc">
-               
                 <p
                   dangerouslySetInnerHTML={{
                     __html: truncate(product.description, 25),
@@ -45,7 +46,10 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
               </div>
 
               <div className="popular-cta">
-                <div className="popular-price">$130</div>
+                <div className="popular-price">
+                  
+                  {product.price.formatted_with_symbol}
+                </div>
                 <button
                   className="popular-btn"
                   onClick={() => onAddToCart(product.id, 1)}
