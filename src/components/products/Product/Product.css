@@ -90,9 +90,10 @@
 
 .product:hover .title
 {
-  transform: translateY(-18px);
+  transform: translateY(-20px);
   font-weight: bold;
   color: #000;
+  display: none;
 }
 
 .info .price

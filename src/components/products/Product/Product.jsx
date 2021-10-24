@@ -6,6 +6,11 @@ import Modal from "react-modal"
 function Product({ product, onAddToCart}) {
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
+      function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+      }
+
+
 
     return (
       <div className="product">
@@ -13,7 +18,7 @@ function Product({ product, onAddToCart}) {
           <img src={product.image.url} alt={product.name} />
         </div>
         <div className="info">
-          <div className="title"> {product.name}</div>
+          <div className="title"> {truncate(product.name, 29)}</div>
 
           <div className="price">{product.price.formatted_with_symbol}</div>
         </div>
