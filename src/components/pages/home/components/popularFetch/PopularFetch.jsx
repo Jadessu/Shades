@@ -1,10 +1,8 @@
 import React from "react";
-import { Products } from "../../..";
-import { commerce } from "../../../../lib/commerce";
-import { useState, useEffect } from "react";
-import Cart from "../../../cart/Cart";
-import { FairSkin, name } from "../../../../requests";
-import Product from "../../../Products/Product/Product";
+
+import { commerce } from "../../../../../lib/commerce";
+import { useState, useEffect } from "react"
+import Cart from "../../../../cart/Cart"
 import "./PopularFetch.css"
 
 function PopularFetch({ fetchUrl, onAddToCart}) {
@@ -32,7 +30,7 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
           {popularProducts.map((product) => (
             <div className="popular-shop-card">
               <div className="popular-title">
-                <h3>{product.name}</h3>
+                <h4>{product.name}</h4>
               </div>
               <div className="popular-desc">
                 <p

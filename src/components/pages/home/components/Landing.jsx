@@ -1,8 +1,9 @@
 import React from 'react'
-import Slider from './Slider'
+import Slider from "./slider/Slider"
 import Categories from './Categories'
-import PopularFetch from './PopularFetch'
-import Newsletter from './Newsletter'
+import PopularFetch from './popularFetch/PopularFetch'
+import Newsletter from "./newsletter/Newsletter"
+import Socials from "./socials/Socials"
 
 function Landing({onAddToCart}) {
     return (
@@ -10,6 +11,7 @@ function Landing({onAddToCart}) {
             <Slider/>
             <Categories/>
             <PopularFetch onAddToCart={onAddToCart}/>
+            <Socials/>
             <Newsletter/>
             
             

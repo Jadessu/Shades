@@ -56,7 +56,7 @@ video{
 .reveal-text::after {
 	animation-delay: var(--animation-delay, 2s);
 	animation-iteration-count: var(--iterations, 1);
-	animation-duration: var(--duration, 900ms);
+	animation-duration: var(--duration, 1300ms);
 	animation-fill-mode: both;
 	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }

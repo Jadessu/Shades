@@ -73,9 +73,10 @@ function Navbar2({totalItems}) {
                       </div>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#">
-                        Shop <i className="fa fa-angle-down"></i>
-                      </a>
+                     
+                        <Link to="/shop">
+                          Shop <i className="fa fa-angle-down"></i>
+                        </Link>
                       <div className="sub-menu mega-menu mega-menu-column-4">
                         <div className="list-item">
                           <h4 className="title">Men's Fashion</h4>

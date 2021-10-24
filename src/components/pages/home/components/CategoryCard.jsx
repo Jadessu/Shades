@@ -1,19 +1,32 @@
 import styled from "styled-components";
 import { mobile } from "../../../../responsive";
 import { Link } from "react-router-dom";
+const CategoryImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease 0s;
+  ${mobile({ height: "20vh" })}
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+`;
 const CategoryContainer = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
+  transition: transform 0.3s ease 0s;
+  &:hover {
+    ${CategoryImage} {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+  }
 `;
 
-const CategoryImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  ${mobile({ height: "20vh" })}
-`;
+
 
 const CategoryInfo = styled.div`
   position: absolute;

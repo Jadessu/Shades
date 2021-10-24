@@ -3,6 +3,7 @@ import "./Footer.css"
 
 function Footer() {
     return (
+      <div className = "footer-background">
       <div className=" container footer-container">
         <div className="footer-left-container">
           <div className="footer-left">
@@ -43,6 +44,7 @@ function Footer() {
           </div>
           <div className="footer-right-2"></div>
         </div>
+      </div>
       </div>
     );
 }

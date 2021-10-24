@@ -9,7 +9,8 @@ import Cart from "./components/cart/Cart";
 import Navbar2 from "./components/navbar/Navbar";
 import Landing from "./components/pages/home/components/Landing";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
-import Footer from "./components/pages/home/components/Footer";
+import Footer from "./components/pages/home/components/footer/Footer";
+import Shop from "./components/pages/home/shop/Shop";
 import {
   FetchFairSkin,
   FetchMediumSkin,
@@ -22,7 +23,6 @@ function App() {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
-
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -85,13 +85,19 @@ function App() {
     fetchCart();
   }, []);
 
+
+let forSale = products.filter(
+  (product) => product.name === "Hourglass Vanish Seamless"
+);
+
+
   return (
     <Router>
       <div className="App">
         <Navbar2 totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
-            <Landing onAddToCart={addItemToCart}/>
+            <Landing onAddToCart={addItemToCart} />
             {/* <Products products={products} onAddToCart={addItemToCart} /> */}
           </Route>
           <Route exact path="/cart">
@@ -121,8 +127,11 @@ function App() {
           <Route exact path="/darkskin">
             <FetchDarkSkin onAddToCart={addItemToCart} />
           </Route>
+          <Route exact path="/shop">
+            <Shop products={products} onAddToCart={addItemToCart} forSale={forSale}/>
+          </Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

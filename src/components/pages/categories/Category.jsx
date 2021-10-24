@@ -27,13 +27,13 @@ export const FetchMediumSkin = ({onAddToCart}) => {
           <h1>MEDIUM SKIN</h1>
           <p>We have got you covered.</p>
           <div className="skin-pallete">
-              <div className="palette medium-palette-1"></div>
-              <div className="palette medium-palette-2"></div>
-              <div className="palette medium-palette-3"></div>
-              <div className="palette medium-palette-4"></div>
+            <div className="palette medium-palette-1"></div>
+            <div className="palette medium-palette-2"></div>
+            <div className="palette medium-palette-3"></div>
+            <div className="palette medium-palette-4"></div>
           </div>
         </div>
-        <CategoryFetch fetchUrl={MediumSkin} />
+        <CategoryFetch fetchUrl={MediumSkin} onAddToCart={onAddToCart} />
       </div>
     );
 }
@@ -44,13 +44,13 @@ export const FetchDarkSkin = ({onAddToCart}) => {
           <h1>DARK SKIN</h1>
           <p>We have got you covered.</p>
           <div className="skin-pallete">
-              <div className="palette dark-palette-1"></div>
-              <div className="palette dark-palette-2"></div>
-              <div className="palette dark-palette-3"></div>
-              <div className="palette dark-palette-4"></div>
+            <div className="palette dark-palette-1"></div>
+            <div className="palette dark-palette-2"></div>
+            <div className="palette dark-palette-3"></div>
+            <div className="palette dark-palette-4"></div>
           </div>
         </div>
-        <CategoryFetch fetchUrl={DarkSkin} />
+        <CategoryFetch fetchUrl={DarkSkin} onAddToCart={onAddToCart} />
       </div>
     );
 }

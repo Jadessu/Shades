@@ -11,7 +11,6 @@
      min-width: 350px;
      max-width: 350px;
   background: #f5f5f5;
-  box-shadow: 0 10px 20px rgba(0,0,0,.3);
   overflow: hidden;
   border-radius: 5px;
   padding: 25px;
@@ -22,6 +21,11 @@
   align-items: center;
 
 }
+.popular-product-listing h2{
+  font-weight: 300;
+ text-decoration: underline;
+ margin-bottom: 1rem;
+}
 
 .popular-image{
     max-width: 150px;
@@ -31,8 +35,8 @@
      
       width: 100%;
 }
-  .popular-title {
-    font-weight: 600;
+  .popular-title h4 {
+    /* font-weight: 600; */
     text-transform: uppercase;
     /* font-size: 30px; */
     color: #23211f;
