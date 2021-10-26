@@ -65,21 +65,21 @@ function App() {
 
   const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
     try {
-      const incomingOrder = await commerce.checkout.capture(
-        checkoutTokenId,
-        newOrder
-      );
+      // const incomingOrder = await commerce.checkout.capture(
+      //   checkoutTokenId,
+      //   newOrder
+      // );
 
-      setOrder(incomingOrder);
+      setOrder(newOrder);
 
       refreshCart();
     } catch (error) {
-      setErrorMessage(error.data.error.message);
+      setErrorMessage((error.data && error.data.error && error.data.error.message) || "An error occured while processing payment");
     }
   };
+  console.log("this is incoming order", order)
 
 
-  console.log("this is order", order);
   useEffect(() => {
     fetchProducts();
     fetchCart();
@@ -131,7 +131,7 @@ let forSale = products.filter(
             <Shop products={products} onAddToCart={addItemToCart} forSale={forSale}/>
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

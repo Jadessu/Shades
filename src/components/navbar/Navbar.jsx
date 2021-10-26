@@ -73,13 +73,12 @@ function Navbar2({totalItems}) {
                       </div>
                     </li>
                     <li className="menu-item-has-children">
-                     
-                        <Link to="/shop">
-                          Shop <i className="fa fa-angle-down"></i>
-                        </Link>
+                      <Link to="/shop">
+                        Shop <i className="fa fa-angle-down"></i>
+                      </Link>
                       <div className="sub-menu mega-menu mega-menu-column-4">
                         <div className="list-item">
-                          <h4 className="title">Men's Fashion</h4>
+                          <h4 className="title">Men's Products</h4>
                           <ul>
                             <li>
                               <a href="#">Product List</a>
@@ -93,13 +92,19 @@ function Navbar2({totalItems}) {
                           </ul>
                         </div>
                         <div className="list-item">
-                          <h4 className="title">Women's Fashion</h4>
+                          <h4 className="title">Foundations</h4>
                           <ul>
                             <li>
-                              <a href="#">Product List</a>
+                              <Link to="/fairskin">Fair Skin </Link>
+                            </li>
+                            <li>
+                              <Link to="/mediumskin">Medium Skin </Link>
+                            </li>
+                            <li>
+                              <Link to="/darkskin"> Skin </Link>
                             </li>
                           </ul>
-                          <h4 className="title">Furniture</h4>
+                          <h4 className="title">Makeup Tools</h4>
                           <ul>
                             <li>
                               <a href="#">Product List</a>
@@ -107,7 +112,7 @@ function Navbar2({totalItems}) {
                           </ul>
                         </div>
                         <div className="list-item">
-                          <h4 className="title">Home, Kitchen</h4>
+                          <h4 className="title">Women's Products</h4>
                           <ul>
                             <li>
                               <a href="#">Product List</a>
@@ -115,7 +120,10 @@ function Navbar2({totalItems}) {
                           </ul>
                         </div>
                         <div className="list-item">
-                          <img src="img/shop1.jpg" alt="shop" />
+                          <img
+                            src="https://images.unsplash.com/photo-1594461287652-10b41090cf91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+                            alt="shop"
+                          />
                         </div>
                       </div>
                     </li>

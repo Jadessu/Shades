@@ -44,7 +44,7 @@ function Product({ product, onAddToCart}) {
                 boxShadow: "0 5px 16px rgba(0, 0, 0, 0,2)",
                 background: "#fff",
                 color: "#000",
-                borderRadius: "10px",
+                
                 position: "absolute",
                 top: "50%",
                 left: "50%",

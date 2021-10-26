@@ -13,35 +13,40 @@ function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCar
         </div>
     )
     const FilledCart = () => (
-        <>
-               
-            {cart.line_items.map( (item) => (
-                <div className="shopping-cart">
-                   <CardItem item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
-                </div>
-            ))}
-                <div className="cardDetails">
-                    Subtotal: {cart.subtotal.formatted_with_symbol}
-                    <div>
-                        <button onClick={handleEmptyCart}>Empty Cart</button>
-                        <button component={Link} to="/checkout">Checkout</button>
-                    </div>
-                </div>
-               
-        </>
-    )
+      <>
+        {cart.line_items.map((item) => (
+          <div className="shopping-cart">
+            <CardItem
+              item={item}
+              onUpdateCartQty={handleUpdateCartQty}
+              onRemoveFromCart={handleRemoveFromCart}
+            />
+          </div>
+        ))}
+        <div className="cardDetails">
+          Subtotal: {cart.subtotal.formatted_with_symbol}
+          <div className="cart-buttons-checkout">
+            <button className="empty-cart-button"onClick={handleEmptyCart}>Empty Cart</button>
+            {/* <button 
+                        <Link to="/checkout">Checkout</Link></button> */}
+            <Link to="/checkout">
+              <button className="checkout-button">Checkout </button>
+               </Link>
+          </div>
+        </div>
+      </>
+    );
 
     if(!cart.line_items) return "...Loading"
     return (
       <div className="cart-wrapper">
         <div class="heading ">
           <h1>My Cart</h1>
-          <a href="#" class="continue">
+          <Link to="/checkout">
             Continue Shopping
-          </a>
+          </Link>
         </div>
         {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
-        
       </div>
     );
 }

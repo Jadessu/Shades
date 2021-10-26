@@ -10,7 +10,7 @@ function Footer() {
             <p>NEW ARRIVAL</p>
             <h3>
               NEW LORIAN EVENING <br />
-              DRESS DESIGN
+              MAKEUP PRODUCT
             </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing <br />

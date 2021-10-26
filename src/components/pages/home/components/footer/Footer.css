@@ -1,10 +1,13 @@
 
 .footer-background{
     background-color: black;
+    margin-top: 60px;
+
 }
 .footer-container{
     background: black;
     color: white;
+
 }
 .footer-container p, .footer-container h3{
     margin: 1rem

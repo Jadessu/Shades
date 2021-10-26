@@ -52,6 +52,10 @@ const CategoryButton = styled.button`
   color: gray;
   cursor: pointer;
   font-weight: 600;
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  &:hover {
+    background-color: rgb(245, 224, 224);
+  }
 `;
 
 const CategoryCard = ({ item }) => {

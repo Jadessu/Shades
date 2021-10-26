@@ -4,6 +4,7 @@ import Categories from './Categories'
 import PopularFetch from './popularFetch/PopularFetch'
 import Newsletter from "./newsletter/Newsletter"
 import Socials from "./socials/Socials"
+import Footer from "../components/footer/Footer"
 
 function Landing({onAddToCart}) {
     return (
@@ -13,6 +14,7 @@ function Landing({onAddToCart}) {
             <PopularFetch onAddToCart={onAddToCart}/>
             <Socials/>
             <Newsletter/>
+            <Footer/>
             
             
         </div>

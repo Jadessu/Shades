@@ -2,6 +2,7 @@ import React from "react"
 import CategoryFetch from "../../../CategoryFetch"
 import { FairSkin, MediumSkin, DarkSkin} from "../../../requests"
 import "./Trial.css"
+import Footer from "../../pages/home/components/footer/Footer"
 
 export const FetchFairSkin = ({onAddToCart, title}) => {
     return (
@@ -17,6 +18,7 @@ export const FetchFairSkin = ({onAddToCart, title}) => {
           </div>
         </div>
         <CategoryFetch fetchUrl={FairSkin} onAddToCart={onAddToCart}/>
+        <Footer/>
       </div>
     );
 }
@@ -34,6 +36,7 @@ export const FetchMediumSkin = ({onAddToCart}) => {
           </div>
         </div>
         <CategoryFetch fetchUrl={MediumSkin} onAddToCart={onAddToCart} />
+        <Footer/>
       </div>
     );
 }
@@ -51,6 +54,7 @@ export const FetchDarkSkin = ({onAddToCart}) => {
           </div>
         </div>
         <CategoryFetch fetchUrl={DarkSkin} onAddToCart={onAddToCart} />
+        <Footer/>
       </div>
     );
 }
