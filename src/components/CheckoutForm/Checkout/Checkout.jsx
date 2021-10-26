@@ -50,6 +50,8 @@ function Checkout({cart, order, onCaptureCheckout, error}) {
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1)
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1)
 
+  let randomReferenceNumber = Math.floor(100000 + Math.random() * 900000)
+
 const next = (data) => {
 setShippingData(data)
 nextStep()
@@ -74,7 +76,7 @@ nextStep()
               <button className="go-home">go home</button>
             </div>
             <div className="confirmation-footer">
-              <p>Order ref:</p>
+              <p>Order ref: <span className="order-ref"></span></p>
             </div>
           </div>
         </div>
