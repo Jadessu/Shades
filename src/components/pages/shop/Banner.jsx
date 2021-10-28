@@ -8,32 +8,28 @@ import "./slider-animations.css";
 function Banner({forSale}) {
   const content = [
     {
-      title: "Vulputate Mollis Ultricies Fermentum Parturient",
+      title: "SHOP OUR FAIR & LIGHT SKIN CATEGORY",
       description:
-        "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
+        "Tip: For fair skin tones, these are the two shades you should use when it comes to highlighter, while champagne, pale gold and pink highlighters complement light skin tones best. But be careful with pearlescent sheen—too much can leave you looking like an ice-princess. Just a touch will do!",
       button: "Read More",
-      image:
-        "https://images.unsplash.com/photo-1543366749-659c75191d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
-      user: "Luan Gjokaj",
-      userProfile: "https://i.imgur.com/JSW6mEk.png",
+      image: "https://i.imgur.com/6jSjfl8.jpg",
+      
     },
     {
-      title: "Tortor Dapibus Commodo Aenean Quam",
+      title: "SHOP OUR MEDIUM SKIN CATEGORY",
       description:
-        "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+        "Tip: The trick with medium skin tones is to stay away from highlighters that are too pink. Look for peach shades and creamy beige hues. Apply along on your cheekbones and brow bones for a look to remember.",
       button: "Discover",
-      image: "https://i.imgur.com/DCdBXcq.jpg",
-      user: "Erich Behrens",
-      userProfile: "https://i.imgur.com/0Clfnu7.png",
+      image: "https://i.imgur.com/2SdYAqX.jpg",
+      
     },
     {
-      title: "Phasellus volutpat metus",
+      title: "SHOP OUR DARK SKIN CATEGORY",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+        "Tip: Darker skin tones get the best out of gold and bronze highlighters. The richer your skin tone is, the more saturated you gold makeup can be. Try a few before you take them home—the wrong shade can leave a grey cast.",
       button: "Buy now",
-      image: "https://i.imgur.com/DvmN8Hx.jpg",
-      user: "Bruno Vizovskyy",
-      userProfile: "https://i.imgur.com/4KeKvtH.png",
+      image: "https://i.imgur.com/LrztOZs.jpg",
+      
     },
   ];
     return (
@@ -43,7 +39,8 @@ function Banner({forSale}) {
             key={index}
             className="slider-content"
             style={{
-              background: `url('${item.image}') no-repeat center center`,
+              background: `url('${item.image}') no-repeat center center / cover `
+              
             }}
           >
             <div className="inner">
@@ -51,12 +48,7 @@ function Banner({forSale}) {
               <p>{item.description}</p>
               <button>{item.button}</button>
             </div>
-            <section>
-              <img src={item.userProfile} alt={item.user} />
-              <span>
-                Posted by <strong>{item.user}</strong>
-              </span>
-            </section>
+            
           </div>
         ))}
       </Slider>

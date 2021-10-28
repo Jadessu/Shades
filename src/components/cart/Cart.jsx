@@ -6,10 +6,10 @@ function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCar
    
 
     const EmptyCart = () => (
-        <div>
+        <div className="no-items">
 
             <h1>You have no items in your shopping cart</h1>
-            <Link to = "/"> Add Items</Link>
+            <Link to = "/shop"> Add Items</Link>
         </div>
     )
     const FilledCart = () => (
@@ -42,7 +42,7 @@ function Cart( { cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCar
       <div className="cart-wrapper">
         <div class="heading ">
           <h1>My Cart</h1>
-          <Link to="/checkout">
+          <Link to="/shop">
             Continue Shopping
           </Link>
         </div>

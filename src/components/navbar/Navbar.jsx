@@ -101,7 +101,7 @@ function Navbar2({totalItems}) {
                               <Link to="/mediumskin">Medium Skin </Link>
                             </li>
                             <li>
-                              <Link to="/darkskin"> Skin </Link>
+                              <Link to="/darkskin"> Deep Skin </Link>
                             </li>
                           </ul>
                           <h4 className="title">Makeup Tools</h4>

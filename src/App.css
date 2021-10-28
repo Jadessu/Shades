@@ -23,6 +23,11 @@ a:hover{
   color: white;
 }
 
+button{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+
 
 
 .App-logo {
