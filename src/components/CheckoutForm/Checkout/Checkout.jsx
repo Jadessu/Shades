@@ -64,6 +64,8 @@ nextStep()
 
   // }
 
+  console.log(order)
+
   let Confirmation = () =>
     order.customer ? (
       <>
@@ -71,12 +73,13 @@ nextStep()
           <div className="confirmation-wrapper-1">
             <div className="confirmation-wrapper-2">
               <h1>Thank you !</h1>
-              <p>Thanks you for your purchase, </p>
+              <p>Thanks you for your purchase, {order.customer.firstname} {order.customer.lastname}</p>
               <p>you should receive a confirmation email soon </p>
-              <button className="go-home">go home</button>
+              <Link to="/">
+              <button className="go-home">go home</button></Link>
             </div>
             <div className="confirmation-footer">
-              <p>Order ref: <span className="order-ref"></span></p>
+              <p>Order ref: <span className="order-ref">{randomReferenceNumber}</span></p>
             </div>
           </div>
         </div>

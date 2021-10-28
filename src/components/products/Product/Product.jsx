@@ -24,7 +24,7 @@ function Product({ product, onAddToCart}) {
         </div>
         <div className="actions-wrapper">
           <button
-            className="add-to-cart-button"
+            className="add-to-cart-button "
             onClick={() => onAddToCart(product.id, 1)}
           >
           Add to Cart

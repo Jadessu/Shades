@@ -49,12 +49,13 @@ const CategoryButton = styled.button`
   border: none;
   padding: 10px;
   background-color: white;
-  color: gray;
+  color: white;
   cursor: pointer;
   font-weight: 600;
   transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   &:hover {
-    background-color: rgb(245, 224, 224);
+    background-color: transparent;
+    border: 1px solid black;
   }
 `;
 

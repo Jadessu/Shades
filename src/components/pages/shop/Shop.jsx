@@ -1,5 +1,5 @@
 import React from 'react'
-import  Products  from '../../../Products/Products'
+import Products from "../../Products/Products"
 import Banner from './Banner'
 
 function Shop({products, onAddToCart, forSale}) {

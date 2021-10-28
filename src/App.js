@@ -10,7 +10,7 @@ import Navbar2 from "./components/navbar/Navbar";
 import Landing from "./components/pages/home/components/Landing";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import Footer from "./components/pages/home/components/footer/Footer";
-import Shop from "./components/pages/home/shop/Shop";
+import Shop from "./components/pages/shop/Shop";
 import {
   FetchFairSkin,
   FetchMediumSkin,

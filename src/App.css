@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Marcellus&display=swap');
+
 body{
 /* font-family: 'Josefin Sans', sans-serif; */
-font-family: 'Marcellus', serif;
+/* font-family: 'Marcellus', serif; */
+font-family: 'Martel', serif;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
 }
 
 .App {
   text-align: center;
   
+}
+a{
+  color: black;
+}
+a:hover{
+  color: white;
 }
 
 
