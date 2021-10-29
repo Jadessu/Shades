@@ -34,6 +34,7 @@ a{
 	position: relative;
 	z-index: 99;
 	padding:15px;
+	align-items: center;
 }
 .header .item-left{
 	flex:0 0 17%;
@@ -44,13 +45,19 @@ a{
 	font-weight: 700;
 	text-decoration: none;
 }
+
+.header .logo img{
+	display: flex;
+	align-items: center;
+}
 .header .item-center{
 	flex:0 0 66%;
 }
 .header .item-right{
-	flex:0 0 17%;
+	/* flex:0 0 17%; */
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 .header .item-right a{ 
      text-decoration: none;

@@ -14,6 +14,7 @@ import makiage from "./images/makiage.jpg"
 import fenty from "./images/fenty.jpg"
 import monika from "./images/monika.jpg"
 import farmasi from "./images/farmasi-vfx-pro.jpg"
+import Logo from "./images/shades.png"
 
 import "./Navbar.css"
 function Navbar2({totalItems}) {
@@ -24,7 +25,10 @@ function Navbar2({totalItems}) {
             <div className="row v-center">
               <div className="header-item item-left">
                 <div className="logo">
-                  <Link to="/"> SHADES </Link>
+                  <Link to="/">
+                    {" "}
+                    <img src={Logo} alt="new Product" width="206px" />{" "}
+                  </Link>
                 </div>
               </div>
               <div className="header-item item-center">

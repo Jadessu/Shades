@@ -8,6 +8,9 @@ function Shop({products, onAddToCart, forSale}) {
       <div>
        
         <Banner forSale={forSale[0]}/>
+        <div className="title">
+          <h2>All Products</h2>
+        </div>
         <Products products={products} onAddToCart={onAddToCart} />
       </div>
     );
