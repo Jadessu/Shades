@@ -9,15 +9,15 @@ const CategoryImage = styled.img`
   ${mobile({ height: "20vh" })}
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 `;
 const CategoryContainer = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
-  transition: transform 0.3s ease 0s;
+  transition: transform var(--transition);
   &:hover {
     ${CategoryImage} {
       -webkit-filter: blur(0);

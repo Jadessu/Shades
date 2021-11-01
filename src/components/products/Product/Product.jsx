@@ -12,6 +12,7 @@ function Product({ product, onAddToCart}) {
 
 
 
+      console.log("this is product",product)
     return (
       <div className="product">
         <div className="image-wrapper" onClick={() => setModalIsOpen(true)}>
