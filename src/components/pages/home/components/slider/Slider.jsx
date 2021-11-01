@@ -1,16 +1,8 @@
 import React from 'react'
-import styled from "styled-components";
 import "./Slider.css"
 import mainVideo from "../../images/mainVideo.mp4"
 
-// const Container = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   display: flex;
-//   position: relative;
-//   overflow: hidden;
-  
-// `;
+
 
 
 

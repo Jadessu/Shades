@@ -4,7 +4,7 @@ import { FairSkin, MediumSkin, DarkSkin} from "../../../requests"
 import "./Trial.css"
 import Footer from "../../pages/home/components/footer/Footer"
 
-export const FetchFairSkin = ({onAddToCart, title}) => {
+export const FetchFairSkin = ({onAddToCart}) => {
     return (
       <div>
         <div className="category-banner banner1">

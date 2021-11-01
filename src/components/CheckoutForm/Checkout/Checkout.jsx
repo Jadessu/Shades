@@ -7,7 +7,7 @@ import {
   StepLabel,
   Typography,
   CircularProgress,
-  Divider,
+
   Button,
 } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";

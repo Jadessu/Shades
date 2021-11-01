@@ -1,15 +1,13 @@
 import React from 'react'
 import {
-  AppBar,
-  Toolbar,
+
+
   IconButton,
   Badge,
-  MenuItem,
-  Menu,
-  Typography,
+  
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-import { Link, useLocation } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import makiage from "./images/makiage.jpg"
 import fenty from "./images/fenty.jpg"
 import monika from "./images/monika.jpg"
@@ -46,33 +44,35 @@ function Navbar2({totalItems}) {
                       <Link to="/"> Home </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#">
+                       <Link to="/">
                         New <i className="fa fa-angle-down"></i>
-                      </a>
+                      </Link>
                       <div className="sub-menu mega-menu mega-menu-column-4">
                         <div className="list-item text-center">
-                          <a href="#">
+                          <Link to="/">
+                            {" "}
+                            
                             <img src={makiage} alt="new Product" />
                             <h4 className="title">II Makiage WULT</h4>
-                          </a>
+                          </Link>
                         </div>
                         <div className="list-item text-center">
-                          <a href="#">
+                           <Link to="/">
                             <img src={monika} alt="new Product" />
                             <h4 className="title">Monika Blunder</h4>
-                          </a>
+                          </Link>
                         </div>
                         <div className="list-item text-center">
-                          <a href="#">
+                           <Link to="/">
                             <img src={fenty} alt="new Product" />
                             <h4 className="title">Fenty Beauty Pro</h4>
-                          </a>
+                          </Link>
                         </div>
                         <div className="list-item text-center">
-                          <a href="#">
+                           <Link to="/">
                             <img src={farmasi} alt="new Product" />
                             <h4 className="title">Farmasi VFX PRO</h4>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </li>
@@ -85,13 +85,13 @@ function Navbar2({totalItems}) {
                           <h4 className="title">Men's Products</h4>
                           <ul>
                             <li>
-                              <a href="#">Product List</a>
+                              <Link to="/">Product List </Link>
                             </li>
                           </ul>
                           <h4 className="title">Beauty</h4>
                           <ul>
                             <li>
-                              <a href="#">Product List</a>
+                              <Link to="/">Product List </Link>
                             </li>
                           </ul>
                         </div>
@@ -111,7 +111,7 @@ function Navbar2({totalItems}) {
                           <h4 className="title">Makeup Tools</h4>
                           <ul>
                             <li>
-                              <a href="#">Product List</a>
+                              <Link to="/">Product List </Link>
                             </li>
                           </ul>
                         </div>
@@ -119,7 +119,7 @@ function Navbar2({totalItems}) {
                           <h4 className="title">Women's Products</h4>
                           <ul>
                             <li>
-                              <a href="#">Product List</a>
+                              <Link to="/">Product List </Link>
                             </li>
                           </ul>
                         </div>
@@ -133,10 +133,10 @@ function Navbar2({totalItems}) {
                     </li>
 
                     <li className="menu-item-has-children">
-                      <a href="#">About</a>
+                      <Link to="/">Product List </Link>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <Link to="/">Product List </Link>
                     </li>
                   </ul>
                 </nav>

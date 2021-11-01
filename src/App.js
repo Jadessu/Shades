@@ -1,22 +1,17 @@
 import "./App.css";
-// import Products from './components/Products/Products';
-import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
-import { Products } from "./components";
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { commerce } from "./lib/commerce";
 import { useState, useEffect } from "react";
-import Navbar from "./components/realNavbar/Navbar";
 import Cart from "./components/cart/Cart";
 import Navbar2 from "./components/navbar/Navbar";
 import Landing from "./components/pages/home/components/Landing";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
-import Footer from "./components/pages/home/components/footer/Footer";
 import Shop from "./components/pages/shop/Shop";
 import {
   FetchFairSkin,
   FetchMediumSkin,
   FetchDarkSkin,
 } from "./components/pages/categories/Category";
-// import { FairSkin, name} from "./requests"
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -77,7 +72,6 @@ function App() {
       setErrorMessage((error.data && error.data.error && error.data.error.message) || "An error occured while processing payment");
     }
   };
-  console.log("this is incoming order", order)
 
 
   useEffect(() => {
@@ -98,7 +92,6 @@ let forSale = products.filter(
         <Switch>
           <Route exact path="/">
             <Landing onAddToCart={addItemToCart} />
-            {/* <Products products={products} onAddToCart={addItemToCart} /> */}
           </Route>
           <Route exact path="/cart">
             <Cart
@@ -131,7 +124,6 @@ let forSale = products.filter(
             <Shop products={products} onAddToCart={addItemToCart} forSale={forSale}/>
           </Route>
         </Switch>
-        {/* <Footer /> */}
       </div>
     </Router>
   );

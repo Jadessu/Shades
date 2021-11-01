@@ -2,7 +2,6 @@ import React from "react";
 
 import { commerce } from "../../../../../lib/commerce";
 import { useState, useEffect } from "react"
-import Cart from "../../../../cart/Cart"
 import "./PopularFetch.css"
 
 function PopularFetch({ fetchUrl, onAddToCart}) {
