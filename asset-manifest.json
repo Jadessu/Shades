@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/commerce-app/static/css/main.36e0c7c1.chunk.css",
+    "main.js": "/commerce-app/static/js/main.e0ae06d7.chunk.js",
+    "main.js.map": "/commerce-app/static/js/main.e0ae06d7.chunk.js.map",
+    "runtime-main.js": "/commerce-app/static/js/runtime-main.b2f11de9.js",
+    "runtime-main.js.map": "/commerce-app/static/js/runtime-main.b2f11de9.js.map",
+    "static/css/2.8887c2d4.chunk.css": "/commerce-app/static/css/2.8887c2d4.chunk.css",
+    "static/js/2.0f008e8f.chunk.js": "/commerce-app/static/js/2.0f008e8f.chunk.js",
+    "static/js/2.0f008e8f.chunk.js.map": "/commerce-app/static/js/2.0f008e8f.chunk.js.map",
+    "index.html": "/commerce-app/index.html",
+    "static/css/2.8887c2d4.chunk.css.map": "/commerce-app/static/css/2.8887c2d4.chunk.css.map",
+    "static/css/main.36e0c7c1.chunk.css.map": "/commerce-app/static/css/main.36e0c7c1.chunk.css.map",
+    "static/js/2.0f008e8f.chunk.js.LICENSE.txt": "/commerce-app/static/js/2.0f008e8f.chunk.js.LICENSE.txt",
+    "static/media/Trial.css": "/commerce-app/static/media/medium.a3b5d28b.jpg",
+    "static/media/farmasi-vfx-pro.3392ce34.jpg": "/commerce-app/static/media/farmasi-vfx-pro.3392ce34.jpg",
+    "static/media/fenty.819c1cda.jpg": "/commerce-app/static/media/fenty.819c1cda.jpg",
+    "static/media/mainVideo.f7e05d3a.mp4": "/commerce-app/static/media/mainVideo.f7e05d3a.mp4",
+    "static/media/makiage.61224c64.jpg": "/commerce-app/static/media/makiage.61224c64.jpg",
+    "static/media/monika.5bdacd8a.jpg": "/commerce-app/static/media/monika.5bdacd8a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2f11de9.js",
+    "static/css/2.8887c2d4.chunk.css",
+    "static/js/2.0f008e8f.chunk.js",
+    "static/css/main.36e0c7c1.chunk.css",
+    "static/js/main.e0ae06d7.chunk.js"
+  ]
+}
