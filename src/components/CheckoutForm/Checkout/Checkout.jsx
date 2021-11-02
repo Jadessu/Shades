@@ -64,7 +64,6 @@ nextStep()
 
   // }
 
-  console.log(order)
 
   let Confirmation = () =>
     order.customer ? (

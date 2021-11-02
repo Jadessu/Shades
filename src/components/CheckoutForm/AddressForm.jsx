@@ -45,7 +45,6 @@ function AddressForm({checkoutToken, next}) {
        setShippingCountry(Object.keys(countries)[0]);
      };
 
-     console.log(shippingCountries, "these are countries")
 
      const fetchSubDivisions = async (countryCode) => {
          const {subdivisions} = await commerce.services.localeListSubdivisions(countryCode)

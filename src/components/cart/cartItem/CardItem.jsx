@@ -2,7 +2,6 @@ import React from 'react'
 import "./CardItem.css"
 
 function CardItem({ item, onUpdateCartQty, onRemoveFromCart}) {
-  console.log(item)
     return (
       <div>
         <div className="cart-item">

@@ -16,6 +16,11 @@
     background: rgb(8, 8, 8);
 }
 
+.footer-left-2 img{
+   max-width: 100vw;
+}
+
+
 @media only screen and (min-width: 768px) {
 	.footer-container{
         display: flex;
@@ -47,10 +52,10 @@
 
 .footer-left-2 img{
     width: 150px;
-    transition: var(--transition);
+    transition: 0.2s ease-in-out;
 }
 .footer-left-2 img:hover{
-    width: 60%;
+    width: 300px;
     
 }
 
@@ -66,4 +71,5 @@
     align-items:flex-start
     
 }
+
 }
