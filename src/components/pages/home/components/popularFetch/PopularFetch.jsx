@@ -28,7 +28,6 @@ function PopularFetch({ fetchUrl, onAddToCart}) {
           {/* <h1>I am popular fetch</h1> */}
           {popularProducts.map((product) => (
             <div className="popular-shop-card">
-              key={product.id}
               <div className="popular-title">
                 <h4>{product.name}</h4>
               </div>

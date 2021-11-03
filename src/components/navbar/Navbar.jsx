@@ -133,10 +133,10 @@ function Navbar2({totalItems}) {
                     </li>
 
                     <li className="menu-item-has-children">
-                      <Link to="/">Product List </Link>
+                      <Link to="/">About </Link>
                     </li>
                     <li>
-                      <Link to="/">Product List </Link>
+                      <Link to="/">Contact </Link>
                     </li>
                   </ul>
                 </nav>
