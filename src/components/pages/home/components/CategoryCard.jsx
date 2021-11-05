@@ -7,8 +7,10 @@ const CategoryImage = styled.img`
   object-fit: cover;
   transition: transform 0.3s ease 0s;
   ${mobile({ height: "20vh" })}
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
+  ${mobile({ filter: "blur(0)" })}
+  
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 `;
